@@ -1,0 +1,16 @@
+author_create:
+    path: /author/create
+    controller: App\Controller\AuthorController::create
+    methods: POST
+
+controllers:
+    resource: ../src/Controller/
+    prefix: /{_locale}
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+    
+    
+    
