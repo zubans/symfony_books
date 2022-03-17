@@ -1,7 +1,5 @@
 # Symfony Docker
 
-A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework, with full [HTTP/2](https://symfony.com/doc/current/weblink.html), HTTP/3 and HTTPS support.
-
 ![CI](https://github.com/dunglas/symfony-docker/workflows/CI/badge.svg)
 
 ## Getting Started
@@ -19,10 +17,3 @@ A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony
 * [Vulcain](https://vulcain.rocks) support
 * Just 2 services (PHP FPM and Caddy server)
 * Super-readable configuration
-
-## Docs
-
-
-## Credits
-
-Created by [Kévin Dunglas](https://dunglas.fr), co-maintained by [Maxime Helias](https://twitter.com/maxhelias) and sponsored by [Les-Tilleuls.coop](https://les-tilleuls.coop).
