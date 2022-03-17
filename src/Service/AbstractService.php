@@ -3,6 +3,8 @@
 namespace App\Service;
 
 use Symfony\Component\HttpKernel\Log\Logger;
+use Symfony\Component\Validator\Validation;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 abstract class AbstractService
 {
@@ -10,9 +12,13 @@ abstract class AbstractService
 
     public Logger $logger;
 
+    public ValidatorInterface $validator;
+
     public function __construct()
     {
         $this->logger = new Logger();
+        $this->validator = Validation::createValidator();
+
     }
 
     abstract protected function validate(array $request);

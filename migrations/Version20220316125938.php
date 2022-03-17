@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace DoctrineMigrations;
 
-use App\Entity\Author;
-use App\Entity\Book;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
 use Faker\Factory;

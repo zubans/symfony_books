@@ -3,7 +3,6 @@
 namespace App\Service;
 
 use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Validator\Validation;
 use App\Service\Exceptions\TokenException;
 
 class BookService extends AbstractService implements Fields
@@ -74,8 +73,7 @@ class BookService extends AbstractService implements Fields
      */
     protected function validate(array $request): void
     {
-        $validator = Validation::createValidator();
-        $validator->validate(
+        $this->validator->validate(
             $request,
             [
                 new Assert\NotBlank(),

@@ -3,12 +3,10 @@
 namespace App\Service;
 
 use App\Service\Exceptions\TokenException;
-use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class AuthorService extends AbstractService implements Fields
 {
-
     private string $name;
 
     /**
@@ -37,8 +35,7 @@ class AuthorService extends AbstractService implements Fields
      */
     protected function validate(array $request): void
     {
-        $validator = Validation::createValidator();
-        $validator->validate(
+        $this->validator->validate(
             $request,
             [
                 new Assert\NotBlank(),
@@ -50,7 +47,6 @@ class AuthorService extends AbstractService implements Fields
         );
 
         if (!$this->checkToken($request) && $_ENV['TOKEN_ENABLED']) {
-            //todo it should be in exception class
             $this->logger->alert('wrong token in request ' . serialize($request));
             throw new TokenException('Something wrong with request');
         }
