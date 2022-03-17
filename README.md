@@ -9,8 +9,7 @@ A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony
 1. If not already done, [install Docker Compose](https://docs.docker.com/compose/install/)
 2. Run `docker-compose build --pull --no-cache` to build fresh images
 3. Run `docker-compose up` (the logs will be displayed in the current shell)
-4. In the project folder run `docker exec -it symfony-php //bin/sh -c "php bin/console doctrine:database:create"`
-
+4. Run `docker-compose down --remove-orphans` to stop the Docker containers.
 ## Features
 
 * Production, development and CI ready

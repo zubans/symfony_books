@@ -18,7 +18,6 @@ class BookController extends AbstractController
     /**
      * @throws TokenException|\Exception
      */
-    #[Route('/book/create', name: 'app_book', methods: ['POST'])]
     public function create(TranslatorInterface $translator, ManagerRegistry $manager, Request $request): JsonResponse
     {
         $bookReq = new BookService(json_decode($request->getContent(), true), $translator->getLocale());

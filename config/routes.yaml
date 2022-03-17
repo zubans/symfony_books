@@ -2,6 +2,10 @@ author_create:
     path: /author/create
     controller: App\Controller\AuthorController::create
     methods: POST
+    
+book_create:
+    path: /book/create
+    controller: App\Controller\BookController:create
 
 controllers:
     resource: ../src/Controller/
